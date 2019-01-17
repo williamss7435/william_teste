@@ -1,0 +1,46 @@
+.navbar-toggler{
+    color: black;
+    background: white;
+}
+
+.main-navbar {
+    background: black;
+    border-bottom: solid 2px black;
+}
+
+.main-navbar ul .btn-options{
+   font-weight: 500;
+   color: white;
+   border: 1px solid white;
+}
+
+.main-navbar ul .btn-options:hover{
+    transition: 0.7s;
+    background: #bc3b14;
+    color: white;
+ }
+
+ #btn-add-new-running{
+     background: white;
+     border-radius: 25px;
+     font-weight: 500;
+ }
+
+ #btn-add-new-running:hover{
+    transition: 0.3s;
+    font-weight: 600;
+    color: white;
+    background: #bc3b14;
+}
+
+#modal-new-driver .modal-content{
+    background: #e5e5e5;
+    font-weight: 600;
+}
+
+#modal-new-driver .modal-header{
+    background: black;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5em;
+}

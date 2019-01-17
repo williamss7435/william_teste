@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projeto Corridas Compartilhadas</title>
+    <link rel="stylesheet" href="src/bootstrap-4.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>  
+        <!-- Start Navbar -->
+        <nav class="navbar navbar-expand-lg main-navbar navbar-light">
+            <a class="navbar-brand" href="#"><img src="img/logo-easycar-small.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ml-lg-5">
+                    <li class="nav-item justify-content-center mb-3 mb-lg-0">
+                        <btn class="btn btn-block" id="btn-add-new-running">Adicinar Nova Corrida</btn>
+                    </li>
+                    <li class="nav-item ml-lg-5 justify-content-center mb-3 mb-lg-0">
+                        <btn class="btn btn-block btn-options">Motoristas</btn>
+                    </li>
+                    <li class="nav-item ml-lg-2 justify-content-center mb-3 mb-lg-0">
+                        <btn class="btn btn-block btn-options">Passageiros</btn>
+                    </li>
+                  </ul>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+
+        <!-- Start ScreenDriver -->
+        <div class="container-fluid mt-4 position-absolute">
+            <div class="row">
+                <div class="col-12 col-lg-4 mb-3">
+                    <button type="button" class="btn btn-primary btn-block" id="btn-new-driver">Cadastrar Novo Motorista</button>
+                </div>
+                <div class="col-12 col-lg-4 mb-3">
+                        <button type="button" class="btn btn-secondary btn-block disabled">Alterar Status</button>
+                </div>
+                <div class="col-12 col-lg-4 mb-3">
+                        <button type="button" class="btn btn-secondary btn-block disabled">Excluir Motorista (Não Implementado)</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="input-group mb-3 mt-5">
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">Pesquisar</span>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                        <table class="table table-bordered table-hover table-sm table-responsive-sm">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">CPF</th>
+                                    <th scope="col">Carro</th>
+                                    <th scope="col">Sexo</th>
+                                    <th scope="col">Data de nasc.</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>OK</td>
+                                    <td>William Dos Santos</td>
+                                    <td>12312323</td>
+                                    <td>Fusca</td>
+                                    <td>Masculino</td>
+                                    <td>07/02/1992</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                </div>
+            </div>
+        </div>
+        <!-- End Screen Driver -->
+    
+        <!-- Start Modal New Driver -->
+        <div class="modal fade" id="modal-new-driver" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><img src="img/logo-easycar-small.png" class="mr-5" alt=""> Novo Motorista</h5>
+                    </div>
+                    <div class="modal-body">
+                            <form id="form-new-driver">
+                                <div class="form-group">
+                                    <label for="driver-name">Nome Completo</label>
+                                    <input type="email" class="form-control" name="driver-name" id="driver-name" placeholder="Insira o nome Completo">
+                                </div>
+                                <div class="form-group">
+                                        <label for="driver-cpf">CPF</label>
+                                        <input type="number" class="form-control" name="driver-cpf" id="driver-cpf" placeholder="Insira o CPF do Motorista">
+                                </div>
+                                <div class="form-group">
+                                        <label for="car-model">Modelo Do Carro</label>
+                                        <input type="email" class="form-control" name="car-model" id="car-model" placeholder="Insira o nome Completo">
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <label for="driver-birth">Nascimento</label>
+                                        <input type="date" class="form-control" name="driver-birth" id="driver-birth" placeholder="First name">
+                                    </div>
+                                    <div class="col-5 offset-2">
+                                        <label for="driver-gender">Sexo</label>
+                                        <select class="form-control" id="driver-birth" id="driver-gender">
+                                            <option selected>Masculino</option>
+                                            <option>Feminino</option>
+                                         </select>
+                                    </div>
+                                </div>
+                            </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">Cadastrar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal New Driver -->
+
+
+    <script src="src/jquery-3.3.1.min.js"></script>
+    <script src="src/bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+    <script>
+        $('#btn-new-driver').click(event => {
+            $('#modal-new-driver').modal('show');
+        });
+    
+    </script>
+</body>
+</html>
