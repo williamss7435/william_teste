@@ -8,13 +8,13 @@
     border-bottom: solid 2px black;
 }
 
-.main-navbar ul .btn-options{
+.btn-options{
    font-weight: 500;
    color: white;
    border: 1px solid white;
 }
 
-.main-navbar ul .btn-options:hover{
+.btn-options:hover{
     transition: 0.7s;
     background: #bc3b14;
     color: white;
@@ -43,4 +43,95 @@
     color: white;
     font-weight: 500;
     font-size: 1.5em;
+}
+
+#modal-new-user .modal-content{
+    background: #e5e5e5;
+    font-weight: 600;
+}
+
+#modal-new-user .modal-header{
+    background: black;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+#menu-lg-options{
+    background: #6d6e70;
+}
+
+a{
+    height: 100%;
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.b {
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.title-content{
+    font-size: 1.2em;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    margin: auto;
+    font-weight: 500;
+    text-align: center;
+}
+
+.btn-screen-select{
+    background: #bc3b14;
+    color: white;
+}
+
+.invalid{
+    border-color: red;
+}
+
+.invalid:hover{
+    border-color: red;
+    border: 2px solid red;
+}
+
+small .error{
+    color: #bc3b14;
+}
+
+#modal-success .modal-header{
+    background: green;
+    color: white;
+}
+
+#modal-success .modal-content{
+    background: #defce8;
+    font-weight: 500;
+    color: #5ea074;
+    font-size: 1.5em;
+}
+
+#modal-failed .modal-header{
+    background: red;
+    color: white;
+}
+
+#modal-failed .modal-content{
+    background: #fcdee0;
+    font-weight: 500;
+    color: #a05e5e;
+    font-size: 1.5em;
+}
+
+#modal-load{
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.active-item{
+    background: yellow;
+    font-weight: 500;
 }
